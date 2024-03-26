@@ -1,0 +1,22 @@
+<div class="container border border-2 text-center bg-light">
+    <h3>Class Binding</h3>
+    <div class="m-3 ">
+        <button [disabled]="disabled" class="btn w-25 btn-danger m-1" (click)="textColor = 'text-bg-danger'">Red</button>
+        <button [disabled]="disabled" class="btn w-25 btn-success mx-2 my-1" (click)="textColor = 'text-bg-success'">Green</button>
+        <button [disabled]="disabled" class="btn w-25 btn-primary m-1" (click)="textColor = 'text-bg-primary'">Blue</button>
+        <button [disabled]="disabled" class="btn w-25 btn-warning m-1" (click)="textColor = 'text-bg-warning'">Yellow</button>
+        <button [disabled]="disabled" class="btn w-25 btn-light mx-2 my-1 border " (click)="textColor = 'text-bg-light'">White</button>
+        <button [disabled]="disabled" class="btn w-25 btn-dark m-1" (click)="textColor = 'text-bg-dark'">Black</button>
+    </div>
+
+    <div [class]="textColor" class="m-3 p-3 w-50 mx-auto border border-1 rounded">
+        <span>Cámbiame de color</span>
+        
+    </div>
+    <div class="form-check form-switch d-flex justify-content-center">
+        <input class="form-check-input" type="checkbox" id="disabled" (change)="disabled = !disabled">
+        <label for="disabled" class="mx-2">Deshabilitar botones</label>
+    </div>
+    
+    
+</div>
