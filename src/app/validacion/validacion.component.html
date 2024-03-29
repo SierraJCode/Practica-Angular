@@ -1,0 +1,39 @@
+<div class="container border border-2 mt-4 p-3">
+    <h3 class="text-center m-4">Validaciones de formularios</h3>
+    <div class="d-flex justify-content-center text-secondary">
+        <div class="border border-2 p-5 rounded-5">
+
+            <form (ngSubmit)="procesarDatos()" #form="ngForm">
+                <div class="h1 fw-bold text-center mb-4 ">Registro</div>
+                <div class="">
+                    <div>Usuario</div>
+                    <div class="d-flex">
+                        <input class="form-control" type="text" name="usuario" required [(ngModel)]="persona.usuario" #usuario="ngModel">
+                    </div> 
+                </div>
+                <div class="alert alert-danger mt-1" [hidden]="usuario.valid || usuario.pristine">
+                    Este campo es obligatorio
+                </div>
+                <div class="mt-1">
+                    <div class="">Email</div>
+                    <input class="form-control" type="text" name="email" [(ngModel)]="persona.email" required #email="ngModel">
+                </div>
+                <div class="text-danger" [hidden]="email.valid || email.pristine">
+                    *Este campo es obligatorio
+                </div>
+                <div class="mt-1">
+                    <div class="">Date</div>
+                    <input class="form-control text-secondary" required type="date" name="date" id="date" [(ngModel)]="persona.date" #date="ngModel">
+                </div>
+                <div class="mt-1 d-flex gap-1">
+
+                    <input class="form-check-input" required type="checkbox" name="t&c" id="t&c">
+                    <label for="t&c" class="" style="font-size: 0.9rem;">Acepto los terminos y condiciones</label>
+                </div>
+                <div>
+                    <button class="btn btn-primary mt-3 form-control" [disabled]="form.invalid">Ver</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
