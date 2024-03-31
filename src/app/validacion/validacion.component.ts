@@ -23,5 +23,8 @@ export class ValidacionComponent {
     alert("Enviando datos..")
   }
 
+  mostrar(){
+    
+  }
   
 }

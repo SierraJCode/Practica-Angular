@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InterpolacionComponent } from './interpolacion/interpolacion.component';
 import { ClassbindingComponent } from './classbinding/classbinding.component';
 import { PropertybindingComponent } from './propertybinding/propertybinding.component';
@@ -11,8 +11,8 @@ import { FormularioReactivoComponent } from './formulario-reactivo/formulario-re
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, InterpolacionComponent, ClassbindingComponent,
-  PropertybindingComponent, LoginformComponent,ValidacionComponent, ReactiveFormsModule,
+  imports: [RouterOutlet, InterpolacionComponent, ClassbindingComponent,
+  PropertybindingComponent, LoginformComponent,ValidacionComponent,
   FormularioReactivoComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

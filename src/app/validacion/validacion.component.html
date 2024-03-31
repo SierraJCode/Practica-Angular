@@ -31,9 +31,16 @@
                     <label for="t&c" class="" style="font-size: 0.9rem;">Acepto los terminos y condiciones</label>
                 </div>
                 <div>
-                    <button class="btn btn-primary mt-3 form-control" [disabled]="form.invalid">Ver</button>
+                    <button class="btn btn-primary mt-3 form-control" [disabled]="form.invalid" (click)="mostrar()">Ver</button>
                 </div>
             </form>
+            <div>
+              Datos:
+              <br>
+              Username: {{ persona.usuario }}
+              <br>
+              Email: {{ persona.email }}
+            </div>
         </div>
     </div>
 </div>
