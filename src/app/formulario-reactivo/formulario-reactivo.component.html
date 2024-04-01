@@ -8,9 +8,21 @@
                     <label class="form-label" for="name">Nombre:</label>
                     <input class="form-control" type="text" name="name" id="name" formControlName="name">
                 </div>
+                <div [hidden]="formUser.get('name')?.valid || formUser.get('name')?.pristine" class="alert alert-danger" role="alert">
+                    Este campo es requerido
+                </div>
                 <div class="mt-2">
                     <label class="form-label" for="email">Email:</label>
                     <input class="form-control" type="text" name="email" id="email" formControlName="email">
+                </div>
+                <div [hidden]="formUser.get('email')?.valid || formUser.get('email')?.pristine" class="alert alert-danger" role="alert">
+                    <div *ngIf="formUser.get('email')?.errors?.['required']">
+                        Este campo es requerido
+                    </div>
+                    <div *ngIf="formUser.get('email')?.errors?.['email']">
+                        Debe escribir un email correcto
+                    </div>
+                    
                 </div>
                 
             </form>
