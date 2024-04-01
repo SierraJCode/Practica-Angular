@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
-import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
 
 
 
 @Component({
   selector: 'app-formulario-reactivo',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './formulario-reactivo.component.html',
   styleUrl: './formulario-reactivo.component.scss'
 })
 export class FormularioReactivoComponent {
-  nombre = new FormControl('');
-  email = new FormControl('');
+  
+  formUser = new FormGroup({
+    name : new FormControl('', [Validators.required]),
+    email : new FormControl('', [Validators.required, Validators.email])
+  })
 
-  procesar(){
-    alert(this.nombre.value + " " + this.email.value);
-  }
 }
