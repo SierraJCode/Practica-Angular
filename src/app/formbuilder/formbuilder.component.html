@@ -1,0 +1,18 @@
+<div class="container border border-2 my-4 p-4">
+    <h3 class="text-center">Formulario Reactivo con FormBuilder</h3>
+    <form [formGroup]="formUser">
+        <div>
+            <label class="form-label" for="usuario">Usuario:</label>
+            <input class="form-control" formControlName="usuario" type="text" name="usuario" id="usuario">
+        </div>
+
+        <div>
+            <label class="form-label" for="usuario">Contraseña:</label>
+            <input class="form-control" formControlName="password" type="password" name="usuario" id="usuario">
+        </div>
+        <div [hidden]="formUser.get('usuario')?.errors?.['required']" class="alert alert-danger">
+           
+        </div>
+        {{ formUser.get('usuario')?.errors?.['required']}}
+    </form> 
+</div>

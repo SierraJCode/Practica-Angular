@@ -7,13 +7,14 @@ import { PropertybindingComponent } from './propertybinding/propertybinding.comp
 import { LoginformComponent } from './loginform/loginform.component';
 import { ValidacionComponent } from './validacion/validacion.component';
 import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
+import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, InterpolacionComponent, ClassbindingComponent,
   PropertybindingComponent, LoginformComponent,ValidacionComponent,
-  FormularioReactivoComponent,],
+  FormularioReactivoComponent, FormbuilderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

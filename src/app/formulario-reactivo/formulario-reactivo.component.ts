@@ -2,10 +2,6 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgIf } from '@angular/common';
 
-
-
-
-
 @Component({
   selector: 'app-formulario-reactivo',
   standalone: true,
