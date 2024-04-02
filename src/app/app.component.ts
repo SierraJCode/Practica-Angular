@@ -8,13 +8,14 @@ import { LoginformComponent } from './loginform/loginform.component';
 import { ValidacionComponent } from './validacion/validacion.component';
 import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
+import { ChildrenComponent } from './children/children.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, InterpolacionComponent, ClassbindingComponent,
   PropertybindingComponent, LoginformComponent,ValidacionComponent,
-  FormularioReactivoComponent, FormbuilderComponent],
+  FormularioReactivoComponent, FormbuilderComponent, ChildrenComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
