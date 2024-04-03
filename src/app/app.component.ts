@@ -22,5 +22,6 @@ import { ChildrenComponent } from './children/children.component';
 export class AppComponent {
   title = 'Aprendiendo Angular';
   formTitle = 'Login';
+  name = 'Jesus';
 
 }
