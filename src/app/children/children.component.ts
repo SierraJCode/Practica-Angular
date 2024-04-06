@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { MessagesService } from '../messages.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-children',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './children.component.html',
   styleUrl: './children.component.scss'
 })
@@ -14,10 +15,12 @@ export class ChildrenComponent {
 
   constructor(public messagesService: MessagesService){}
 
-  message?: string;
+  message: string = '';
 
-  addMessage(message:string){
-    this.messagesService.add(message);
+  addMessage(){
+    this.messagesService.add(this.message);
+    alert(this.message);
+    this.message = '';
   }
   
 }

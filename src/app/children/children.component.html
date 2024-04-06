@@ -9,5 +9,13 @@
    <div class="text-center">
       {{ messagesService.messages.length }}
    </div>
-
+   <form (ngSubmit)="addMessage()">
+      <div>
+         <label class="form-label" name="mensaje">Mensaje</label>
+         <input class="form-control" name="mensaje" type="text" placeholder="Escribe aquí tu mensaje" [(ngModel)]="message">
+      </div>
+      <div>
+         <button class="mt-3 btn btn-primary">Enviar</button>
+      </div>
+   </form>  
 </div>
