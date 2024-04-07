@@ -9,13 +9,14 @@ import { ValidacionComponent } from './validacion/validacion.component';
 import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { ChildrenComponent } from './children/children.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, InterpolacionComponent, ClassbindingComponent,
   PropertybindingComponent, LoginformComponent,ValidacionComponent,
-  FormularioReactivoComponent, FormbuilderComponent, ChildrenComponent],
+  FormularioReactivoComponent, FormbuilderComponent, ChildrenComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
